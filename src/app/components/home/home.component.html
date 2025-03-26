@@ -1,2 +1,13 @@
-<p>home works!</p>
-{{ products | json }}
+<div class="po-row">
+    <po-chart
+    [p-series]="pizzaChart"
+    ></po-chart>
+</div>
+
+<div class="po-row">
+    <po-container class="po-lg-12 po-mt-2">
+      <div class="po-font-text-bold">Todos os produtos</div>
+  
+      <po-table p-container="shadow" [p-items]="items" [p-hide-table-search]="false" [p-sort]="true" [p-columns]="columns"> </po-table>
+    </po-container>
+</div>

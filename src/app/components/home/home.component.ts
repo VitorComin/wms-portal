@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { IProduct } from '../../../types/Product';
+import { PoChartSerie } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +11,47 @@ import { IProduct } from '../../../types/Product';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  public products: IProduct[] = [];
+  private products: IProduct[] = [];
+  public stockProducts: IProduct[] = [];
+  public receivingProducts: IProduct[] = [];
+  public shippingProducts: IProduct[] = [];
+  public shippedProducts: IProduct[] = [];
+  public pizzaChart: PoChartSerie[] = [];
+  public items: Array<any> = []
+  public columns: Array<any> = []
 
   constructor(private productService: ProductsService) {}
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
-      console.log(data);
       this.products = data;
+
+      this.stockProducts = this.products.filter(product => product.status === "Estoque");
+      this.receivingProducts = this.products.filter(product => product.status === "Recebimento");
+      this.shippingProducts = this.products.filter(product => product.status === "Expedição");
+      this.shippedProducts = this.products.filter(product => product.status === "Expedido");
+
+      this.pizzaChart = [
+        { label: 'Em Estoque', data: this.stockProducts.length },
+        { label: 'Recebimento', data: this.receivingProducts.length },
+        { label: 'Em Expedição', data: this.shippingProducts.length },
+        { label: 'Expedido', data: this.shippedProducts.length }
+      ];
+
+      this.items = this.products.map(product => ({
+        name: product.name,
+        code: product.code,
+        quantity: product.quantity,
+        status: product.status
+      }));
+      
+      this.columns = [
+        { property: 'name', label: 'Nome' },
+        { property: 'code', label: 'Código' },
+        { property: 'quantity', label: 'Quantidade' },
+        { property: 'status', label: 'Status' }
+      ];
+      
     });
-  }
+  } 
 }

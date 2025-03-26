@@ -3,6 +3,6 @@ export interface IProduct {
     name: string,
     code: string,
     quantity: number,
-    status: "recebimento" | "estoque" | "expedicao" | "expedido",
+    status: "Recebimento" | "Estoque" | "Expedição" | "Expedido",
     updated_at: string
 }

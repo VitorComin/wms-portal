@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ReceivingComponent } from './components/receiving/receiving.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
+import { PoChartModule } from '@po-ui/ng-components';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ShippingComponent } from './components/shipping/shipping.component';
     BrowserModule,
     AppRoutingModule,
     PoModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([]),
+    PoChartModule
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
