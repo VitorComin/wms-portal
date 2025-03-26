@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Produto 1",
+            "code": "123456789",
+            "status": "recebimento",
+            "quantity": 5,
+            "destination": null,
+            "updated_at": "2025-03-25T14:30:00.000Z"
+        },
+        {
+            "id": 2,
+            "name": "Produto 2",
+            "code": "123456789",
+            "status": "estoque",
+            "quantity": 5,
+            "destination": null,
+            "updated_at": "2025-03-25T14:30:00.000Z"
+        },
+        {
+            "id": 3,
+            "name": "Produto 3",
+            "code": "123456789",
+            "status": "expedicao",
+            "quantity": 5,
+            "destination": null,
+            "updated_at": "2025-03-25T14:30:00.000Z"
+        },
+        {
+            "id": 4,
+            "name": "Produto 4",
+            "code": "123456789",
+            "status": "expedido",
+            "quantity": 5,
+            "destination": null,
+            "updated_at": "2025-03-25T14:30:00.000Z"
+        }
+    ]
+}
