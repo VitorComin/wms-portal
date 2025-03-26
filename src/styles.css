@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-brand-01-base: #007bff;
+    --color-brand-02-base: #007bff;
+    --po-color-secondary: #6c757d; /* Cinza */
+  }
+
+.po-menu-panel-inner, .po-menu-panel-logo-container {
+    background-color: #4b4b4b;
+}
+
+.po-menu-panel-item {
+    border: none;
+
+    span {
+        font-weight: 900;
+    }
+}
+
+.po-menu-panel-item-selected {
+    background: #303030;
+
+    span {
+        color: white;
+        font-weight: 500;
+        position: relative;
+        right: 3px
+    }
+
+    border-left: #007bff solid;
+}
+
+.po-menu-panel-item-selected:hover {
+    background-color: #303030;
+}
+
+body {
+    background-color: rgb(185, 185, 185);
+}

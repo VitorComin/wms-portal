@@ -10,8 +10,8 @@ import { PoMenuPanelItem } from '@po-ui/ng-components';
 export class AppComponent {
 
   readonly menuItems: PoMenuPanelItem[] = [
-    { label: 'Home', link: '', icon: 'an an-house-line' },
-    { label: 'Receiving', link: 'receiving', icon: 'an an-box-arrow-down' },
-    { label: 'Shipping', link: 'shipping', icon: 'an an-box-arrow-up' }
+    { label: 'Início', link: '/', icon: 'an an-house-line' },
+    { label: 'Recebimento', link: 'receiving', icon: 'an an-box-arrow-down' },
+    { label: 'Expedição', link: 'shipping', icon: 'an an-box-arrow-up' }
   ];
 }
