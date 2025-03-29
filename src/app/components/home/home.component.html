@@ -1,10 +1,34 @@
-<div class="po-row">
+<po-toolbar p-title="Dashboard"></po-toolbar>
+
+<div class="po-row" style="justify-content: center;">
     <po-chart
     [p-series]="pizzaChart"
     ></po-chart>
 </div>
 
 <div class="po-row">
+  <div class="po-md-12 po-mt-2" style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <po-widget [p-height]="198" style="width: 300px;">
+      <div class="po-font-title po-text-center po-pt-5">{{stockProducts.length}}</div>
+      <div class="po-text-center">Produto(s) em estoque</div>
+    </po-widget>
+    <po-widget [p-height]="198" style="width: 300px;">
+      <div class="po-font-title po-text-center po-pt-5">{{ receivingProducts.length }}</div>
+      <div class="po-text-center">Produto(s) aguardando recebimento</div>
+    </po-widget>
+    <po-widget [p-height]="198" style="width: 300px;">
+      <div class="po-font-title po-text-center po-pt-5">{{shippingProducts.length}}</div>
+      <div class="po-text-center">Produto(s) pronto(s) para envio</div>
+    </po-widget>
+
+    <po-widget [p-height]="198" style="width: 300px;">
+      <div class="po-font-title po-text-center po-pt-5">{{ todayShippedProducts.length }}</div>
+      <div class="po-text-center">Produto(s) expedido(s) hoje</div>
+    </po-widget>
+  </div>
+</div>
+
+<div class="po-row" style="margin-bottom: 50px;">
     <po-container class="po-lg-12 po-mt-2">
       <div class="po-font-text-bold">Todos os produtos</div>
   

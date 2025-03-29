@@ -16,6 +16,7 @@ export class HomeComponent {
   public receivingProducts: IProduct[] = [];
   public shippingProducts: IProduct[] = [];
   public shippedProducts: IProduct[] = [];
+  public todayShippedProducts: IProduct[] = []
   public pizzaChart: PoChartSerie[] = [];
   public items: Array<any> = []
   public columns: Array<any> = []
@@ -25,11 +26,15 @@ export class HomeComponent {
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
       this.products = data;
+      const today = new Date().toISOString().slice(0, 10);
 
       this.stockProducts = this.products.filter(product => product.status === "Estoque");
       this.receivingProducts = this.products.filter(product => product.status === "Recebimento");
       this.shippingProducts = this.products.filter(product => product.status === "Expedição");
       this.shippedProducts = this.products.filter(product => product.status === "Expedido");
+      this.todayShippedProducts = this.shippedProducts.filter(product => 
+        product.updated_at.slice(0, 10) === today
+      );
 
       this.pizzaChart = [
         { label: 'Em Estoque', data: this.stockProducts.length },

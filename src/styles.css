@@ -37,3 +37,7 @@
 body {
     background-color: rgb(185, 185, 185);
 }
+
+.po-toolbar-title {
+    font-size: large;
+}
