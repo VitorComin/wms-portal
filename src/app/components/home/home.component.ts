@@ -6,9 +6,9 @@ import { PoChartSerie } from '@po-ui/ng-components';
 @Component({
   selector: 'app-home',
   standalone: false,
-  
+
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent {
   private products: IProduct[] = [];
@@ -16,47 +16,54 @@ export class HomeComponent {
   public receivingProducts: IProduct[] = [];
   public shippingProducts: IProduct[] = [];
   public shippedProducts: IProduct[] = [];
-  public todayShippedProducts: IProduct[] = []
+  public todayShippedProducts: IProduct[] = [];
   public pizzaChart: PoChartSerie[] = [];
-  public items: Array<any> = []
-  public columns: Array<any> = []
+  public items: Array<any> = [];
+  public columns: Array<any> = [];
 
   constructor(private productService: ProductsService) {}
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(data => {
+    this.productService.getProducts().subscribe((data) => {
       this.products = data;
       const today = new Date().toISOString().slice(0, 10);
 
-      this.stockProducts = this.products.filter(product => product.status === "Estoque");
-      this.receivingProducts = this.products.filter(product => product.status === "Recebimento");
-      this.shippingProducts = this.products.filter(product => product.status === "Expedição");
-      this.shippedProducts = this.products.filter(product => product.status === "Expedido");
-      this.todayShippedProducts = this.shippedProducts.filter(product => 
-        product.updated_at.slice(0, 10) === today
+      this.stockProducts = this.products.filter(
+        (product) => product.status === 'Estoque',
+      );
+      this.receivingProducts = this.products.filter(
+        (product) => product.status === 'Recebimento',
+      );
+      this.shippingProducts = this.products.filter(
+        (product) => product.status === 'Expedição',
+      );
+      this.shippedProducts = this.products.filter(
+        (product) => product.status === 'Expedido',
+      );
+      this.todayShippedProducts = this.shippedProducts.filter(
+        (product) => product.updated_at.slice(0, 10) === today,
       );
 
       this.pizzaChart = [
         { label: 'Em Estoque', data: this.stockProducts.length },
         { label: 'Recebimento', data: this.receivingProducts.length },
         { label: 'Em Expedição', data: this.shippingProducts.length },
-        { label: 'Expedido', data: this.shippedProducts.length }
+        { label: 'Expedido', data: this.shippedProducts.length },
       ];
 
-      this.items = this.products.map(product => ({
+      this.items = this.products.map((product) => ({
         name: product.name,
         code: product.code,
         quantity: product.quantity,
-        status: product.status
+        status: product.status,
       }));
-      
+
       this.columns = [
         { property: 'name', label: 'Nome' },
         { property: 'code', label: 'Código' },
         { property: 'quantity', label: 'Quantidade' },
-        { property: 'status', label: 'Status' }
+        { property: 'status', label: 'Status' },
       ];
-      
     });
-  } 
+  }
 }

@@ -1,4 +1,7 @@
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,24 +12,26 @@ import { HomeComponent } from './components/home/home.component';
 import { ReceivingComponent } from './components/receiving/receiving.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
 import { PoChartModule } from '@po-ui/ng-components';
+import { PoIconModule } from '@po-ui/ng-components';
+import { PoNotificationModule } from '@po-ui/ng-components';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ReceivingComponent,
-    ShippingComponent
+    ShippingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PoModule,
     RouterModule.forRoot([]),
-    PoChartModule
+    PoChartModule,
+    PoIconModule,
+    PoNotificationModule,
   ],
-  providers: [
-    provideHttpClient(withInterceptorsFromDi()),
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideHttpClient(withInterceptorsFromDi())],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
