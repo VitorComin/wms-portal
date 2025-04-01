@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Produto 1",
       "code": "123456789",
-      "status": "Recebimento",
+      "status": "Estoque",
       "quantity": 5,
       "destination": null,
       "updated_at": "2025-03-25T14:30:00.000Z"
@@ -35,6 +35,24 @@
       "quantity": 5,
       "destination": null,
       "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "d59d18b4-9e03-4874-a710-7f36ef9ce6c8",
+      "name": "Produto 5",
+      "code": 222222,
+      "quantity": 22,
+      "status": "Estoque",
+      "updated_at": "2025-04-01T00:40:13.840Z",
+      "destination": null
+    },
+    {
+      "id": "d99fa229-9546-4ec0-9a66-a4bd640d71b5",
+      "name": "teste",
+      "code": 2222222,
+      "quantity": 2,
+      "status": "Recebimento",
+      "updated_at": "2025-04-01T00:43:09.331Z",
+      "destination": null
     }
   ]
 }

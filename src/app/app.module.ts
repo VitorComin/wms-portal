@@ -14,6 +14,8 @@ import { ShippingComponent } from './components/shipping/shipping.component';
 import { PoChartModule } from '@po-ui/ng-components';
 import { PoIconModule } from '@po-ui/ng-components';
 import { PoNotificationModule } from '@po-ui/ng-components';
+import { PoButtonModule } from '@po-ui/ng-components';
+import { PoDynamicModule } from '@po-ui/ng-components';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { PoNotificationModule } from '@po-ui/ng-components';
     PoChartModule,
     PoIconModule,
     PoNotificationModule,
+    PoButtonModule,
+    PoDynamicModule,
   ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent],
