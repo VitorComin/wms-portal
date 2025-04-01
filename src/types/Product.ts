@@ -4,5 +4,6 @@ export interface IProduct {
   code: string;
   quantity: number;
   status: string;
+  destination?: string | null;
   updated_at: string;
 }
