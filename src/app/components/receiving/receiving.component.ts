@@ -81,7 +81,7 @@ export class ReceivingComponent {
         { property: 'quantity', label: 'Quantidade' },
         {
           property: 'receive',
-          label: 'Actions',
+          label: 'Confirmar Recebimento',
           type: 'icon',
           sortable: false,
           icons: [

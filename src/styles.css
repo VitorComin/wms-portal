@@ -19,7 +19,7 @@
   border: none;
 
   span {
-    font-weight: 900;
+    font-weight: 500;
   }
 }
 
@@ -28,7 +28,6 @@
 
   span {
     color: white;
-    font-weight: 500;
     position: relative;
     right: 3px;
   }
@@ -46,4 +45,8 @@ body {
 
 .po-toolbar-title {
   font-size: large;
+}
+
+.po-table-column-icons {
+  color: green !important;
 }

@@ -54,7 +54,7 @@ export class ShippingComponent {
         { property: 'destination', label: 'Destino' },
         {
           property: 'shipping',
-          label: 'Actions',
+          label: 'Confirmar Expedição',
           type: 'icon',
           sortable: false,
           icons: [

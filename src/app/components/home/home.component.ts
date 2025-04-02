@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { IProduct } from '../../../types/Product';
-import { PoChartSerie } from '@po-ui/ng-components';
+import { PoChartDataLabel, PoChartSerie } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-home',
