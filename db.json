@@ -4,9 +4,9 @@
       "id": "1",
       "name": "Produto 1",
       "code": "123456789",
-      "status": "Estoque",
+      "status": "Expedição",
       "quantity": 5,
-      "destination": null,
+      "destination": "fsafsa",
       "updated_at": "2025-03-25T14:30:00.000Z"
     },
     {
@@ -19,10 +19,37 @@
       "updated_at": "2025-03-25T14:30:00.000Z"
     },
     {
+      "id": "23462",
+      "name": "Pr4212",
+      "code": "123456789",
+      "status": "Expedido",
+      "quantity": 5,
+      "destination": "Casa do guimas",
+      "updated_at": "2025-04-02T01:36:41.743Z"
+    },
+    {
+      "id": "29080",
+      "name": "Produt2222o 2",
+      "code": "123456789",
+      "status": "Estoque",
+      "quantity": 10,
+      "destination": null,
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "51562",
+      "name": "Produ455555to 2",
+      "code": "123456789",
+      "status": "Estoque",
+      "quantity": 51,
+      "destination": null,
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
       "id": "3",
       "name": "Produto 3",
       "code": "123456789",
-      "status": "Expedido",
+      "status": "Expedição",
       "quantity": 5,
       "destination": null,
       "updated_at": "2025-04-01T01:09:45.178Z"
@@ -31,7 +58,7 @@
       "id": "4",
       "name": "Produto 4",
       "code": "123456789",
-      "status": "Expedido",
+      "status": "Expedição",
       "quantity": 5,
       "destination": null,
       "updated_at": "2025-03-25T14:30:00.000Z"

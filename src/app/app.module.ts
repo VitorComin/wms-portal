@@ -16,6 +16,7 @@ import { PoIconModule } from '@po-ui/ng-components';
 import { PoNotificationModule } from '@po-ui/ng-components';
 import { PoButtonModule } from '@po-ui/ng-components';
 import { PoDynamicModule } from '@po-ui/ng-components';
+import { PoFieldModule } from '@po-ui/ng-components';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { PoDynamicModule } from '@po-ui/ng-components';
     PoNotificationModule,
     PoButtonModule,
     PoDynamicModule,
+    PoFieldModule,
   ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent],

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { IProduct } from '../../../types/Product';
 import { ProductsService } from '../../services/products.service';
-import { PoNotificationService } from '@po-ui/ng-components';
+import {
+  PoDynamicFormField,
+  PoNotificationService,
+} from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-shipping',
@@ -15,6 +18,8 @@ export class ShippingComponent {
   public shippingProducts: IProduct[] = [];
   public items: Array<any> = [];
   public columns: Array<any> = [];
+  public stockProducts: Array<any> = [];
+  formFields: Array<PoDynamicFormField> = [];
 
   constructor(
     public productService: ProductsService,
@@ -27,6 +32,10 @@ export class ShippingComponent {
 
       this.shippingProducts = this.products.filter(
         (product) => product.status === 'Expedição',
+      );
+
+      this.stockProducts = this.products.filter(
+        (product) => product.status === 'Estoque',
       );
 
       this.items = this.shippingProducts.map((product) => ({
@@ -42,7 +51,7 @@ export class ShippingComponent {
         { property: 'name', label: 'Nome' },
         { property: 'code', label: 'Código' },
         { property: 'quantity', label: 'Quantidade' },
-        { property: 'quantity', label: 'Destino' },
+        { property: 'destination', label: 'Destino' },
         {
           property: 'shipping',
           label: 'Actions',
@@ -57,6 +66,32 @@ export class ShippingComponent {
               value: 'shipping',
             },
           ],
+        },
+      ];
+
+      this.formFields = [
+        {
+          property: 'product',
+          label: 'Produto',
+          divider: 'Detalhes do Produto',
+          required: true,
+          gridColumns: 6,
+          gridSmColumns: 12,
+          fieldValue: 'value',
+          fieldLabel: 'name',
+          options: this.stockProducts.map((product) => ({
+            value: product.id,
+            name: `${product.name} - ${product.quantity} itens`,
+          })),
+          placeholder: 'Selecione um produto',
+        },
+        {
+          property: 'destination',
+          label: 'Destino',
+          required: true,
+          maxLength: 30,
+          gridColumns: 6,
+          gridSmColumns: 12,
         },
       ];
     });
@@ -83,6 +118,49 @@ export class ShippingComponent {
         },
         error: (error) => {
           console.error('Erro ao atualizar o produto:', error);
+          this.poNotification.error({
+            message: 'Erro ao expedir o produto!',
+            duration: 2000,
+          });
+        },
+      });
+    }
+  }
+
+  submitForm(dynamicForm: any) {
+    if (!dynamicForm.form.valid) {
+      this.poNotification.error({
+        message: 'Preencha todos os campos obrigatórios corretamente!',
+        duration: 2000,
+      });
+      return;
+    }
+
+    const formValues = dynamicForm.form.value;
+    const productIndex = this.products.findIndex(
+      (product) => product.id === formValues.product,
+    );
+
+    if (productIndex !== -1) {
+      this.products[productIndex].status = 'Expedição';
+      this.products[productIndex].destination = formValues.destination;
+
+      this.productService.updateProduct(this.products[productIndex]).subscribe({
+        next: (value) => {
+          this.poNotification.success({
+            message: 'Produto em expedição!',
+            duration: 2000,
+          });
+
+          this.items = [
+            { ...value, shipping: ['shipping', 'documentation'] },
+            ...this.items,
+          ];
+
+          dynamicForm.form.reset();
+        },
+        error: (error) => {
+          console.error('Erro ao expedir o produto:', error);
           this.poNotification.error({
             message: 'Erro ao expedir o produto!',
             duration: 2000,
