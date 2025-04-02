@@ -6,15 +6,96 @@
       "code": "123456789",
       "status": "Expedição",
       "quantity": 5,
-      "destination": "fsafsa",
+      "destination": "casa 1",
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "236342734435",
+      "name": "Produto 67",
+      "code": "123456255789",
+      "status": "Expedição",
+      "quantity": 25,
+      "destination": "casa 2",
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "1215212521512521",
+      "name": "Produto 124",
+      "code": "3333322323",
+      "status": "Expedição",
+      "quantity": 51,
+      "destination": "casa 3",
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "1244",
+      "name": "Produto 1111",
+      "code": "1234562222789",
+      "status": "Expedição",
+      "quantity": 25,
+      "destination": "casa 10",
       "updated_at": "2025-03-25T14:30:00.000Z"
     },
     {
       "id": "2",
-      "name": "Produto 2",
-      "code": "123456789",
+      "name": "Produto 222",
+      "code": "123456222222789",
       "status": "Estoque",
       "quantity": 5,
+      "destination": null,
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "232251547546",
+      "name": "Produto 112",
+      "code": "1234567223389",
+      "status": "Estoque",
+      "quantity": 35,
+      "destination": null,
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "2112534",
+      "name": "Produto 5552",
+      "code": "123456785559",
+      "status": "Estoque",
+      "quantity": 55,
+      "destination": null,
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "54765892",
+      "name": "Produto 55522",
+      "code": "123456785559",
+      "status": "Estoque",
+      "quantity": 55,
+      "destination": null,
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "6546754375342",
+      "name": "Produto 51566852",
+      "code": "1234562217855159",
+      "status": "Estoque",
+      "quantity": 55,
+      "destination": null,
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "6587654982",
+      "name": "Produto 5522352",
+      "code": "1234561268785559",
+      "status": "Estoque",
+      "quantity": 55,
+      "destination": null,
+      "updated_at": "2025-03-25T14:30:00.000Z"
+    },
+    {
+      "id": "6587111654982",
+      "name": "Produto Teste",
+      "code": "123411561268785559",
+      "status": "Estoque",
+      "quantity": 551,
       "destination": null,
       "updated_at": "2025-03-25T14:30:00.000Z"
     },
