@@ -49,9 +49,9 @@
       "id": "232251547546",
       "name": "Produto 112",
       "code": "1234567223389",
-      "status": "Estoque",
+      "status": "Expedição",
       "quantity": 35,
-      "destination": null,
+      "destination": "guimas",
       "updated_at": "2025-03-25T14:30:00.000Z"
     },
     {
@@ -158,9 +158,49 @@
       "name": "teste",
       "code": 2222222,
       "quantity": 2,
-      "status": "Recebimento",
+      "status": "Estoque",
       "updated_at": "2025-04-01T00:43:09.331Z",
       "destination": null
+    },
+    {
+      "id": "7f05be29-5f81-41ce-9de1-80c9ea90f0e4",
+      "name": "asfsaf22222",
+      "code": 22222222,
+      "quantity": 23,
+      "status": "Estoque",
+      "updated_at": "2025-04-03T21:55:07.396Z",
+      "destination": null
+    },
+    {
+      "id": "13d19084-1157-412e-bc19-be551e7a1bbf",
+      "name": "Arroz",
+      "code": 2451512364,
+      "quantity": 100,
+      "status": "Estoque",
+      "updated_at": "2025-04-16T00:11:05.249Z",
+      "destination": null
+    },
+    {
+      "id": "30126eeb-f49b-4b7a-b095-e0993ccee55f",
+      "name": "Feijão",
+      "code": 4801206274,
+      "quantity": 200,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T00:14:01.753Z",
+      "destination": null
+    },
+    {
+      "id": "b02a73da-9191-492b-99c8-cc81304ae5f8",
+      "name": "Caixa de Leite",
+      "code": 2532346586,
+      "quantity": 350,
+      "status": "Estoque",
+      "updated_at": "2025-04-16T00:17:09.300Z",
+      "destination": null,
+      "receive": [
+        "receive",
+        "documentation"
+      ]
     }
   ]
 }

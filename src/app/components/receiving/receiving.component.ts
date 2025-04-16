@@ -99,6 +99,7 @@ export class ReceivingComponent {
   }
 
   putReceivedProductIntoStock(selectedProduct: any) {
+    console.log('chegou');
     const productIndex = this.products.findIndex(
       (product) => product.id === selectedProduct.id,
     );
@@ -154,14 +155,12 @@ export class ReceivingComponent {
           duration: 2000,
         });
         const newReceivingProductTableEntry = {
-          id: newReceivingProduct.id,
-          name: newReceivingProduct.name,
-          code: newReceivingProduct.code,
-          quantity: newReceivingProduct.quantity,
+          ...newReceivingProduct,
           receive: ['receive', 'documentation'],
         };
 
         this.items = [...this.items, newReceivingProductTableEntry];
+        this.products = [...this.products, newReceivingProductTableEntry];
 
         dynamicForm.form.reset();
       },
