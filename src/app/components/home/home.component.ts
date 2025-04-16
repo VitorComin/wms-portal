@@ -10,14 +10,12 @@ import { IProduct } from '../../../types/Product';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  private products: IProduct[] = [];
+  public products: IProduct[] = [];
   public stockProducts: IProduct[] = [];
   public receivingProducts: IProduct[] = [];
   public shippingProducts: IProduct[] = [];
   public shippedProducts: IProduct[] = [];
   public todayShippedProducts: IProduct[] = [];
-  public items: Array<any> = [];
-  public columns: Array<any> = [];
 
   constructor(private productService: ProductsService) {}
 
@@ -41,20 +39,6 @@ export class HomeComponent {
       this.todayShippedProducts = this.shippedProducts.filter(
         (product) => product.updated_at.slice(0, 10) === today,
       );
-
-      this.items = this.products.map((product) => ({
-        name: product.name,
-        code: product.code,
-        quantity: product.quantity,
-        status: product.status,
-      }));
-
-      this.columns = [
-        { property: 'name', label: 'Nome' },
-        { property: 'code', label: 'Código' },
-        { property: 'quantity', label: 'Quantidade' },
-        { property: 'status', label: 'Status' },
-      ];
     });
   }
 }

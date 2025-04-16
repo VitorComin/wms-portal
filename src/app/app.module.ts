@@ -19,6 +19,7 @@ import { PoDynamicModule } from '@po-ui/ng-components';
 import { PoFieldModule } from '@po-ui/ng-components';
 import { HomeChartComponent } from './components/home-chart/home-chart.component';
 import { HomeWidgetsComponent } from './components/home-widgets/home-widgets.component';
+import { HomeProductsTableComponent } from './components/home-products-table/home-products-table.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HomeWidgetsComponent } from './components/home-widgets/home-widgets.com
     ShippingComponent,
     HomeChartComponent,
     HomeWidgetsComponent,
+    HomeProductsTableComponent,
   ],
   imports: [
     BrowserModule,
