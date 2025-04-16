@@ -1,5 +1,9 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
-import { IProduct } from '../../../types/Product';
+import {
+  IHomeProductsTableColumns,
+  IHomeProductsTableItens,
+  IProduct,
+} from '../../../types/Product';
 
 @Component({
   selector: 'app-home-products-table',
@@ -11,8 +15,8 @@ import { IProduct } from '../../../types/Product';
 export class HomeProductsTableComponent {
   @Input() products: IProduct[] = [];
 
-  public columns: Array<any> = [];
-  public items: Array<any> = [];
+  public columns: Array<IHomeProductsTableColumns> = [];
+  public items: Array<IHomeProductsTableItens> = [];
 
   ngOnInit(): void {
     this.columns = [

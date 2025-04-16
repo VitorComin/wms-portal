@@ -15,3 +15,15 @@ export interface IProductInfosMap {
   shippedProducts: IProduct[];
   todayShippedProducts: IProduct[];
 }
+
+export interface IHomeProductsTableColumns {
+  property: string;
+  label: string;
+}
+
+export interface IHomeProductsTableItens {
+  name: string;
+  code: string;
+  quantity: number;
+  status: string;
+}
