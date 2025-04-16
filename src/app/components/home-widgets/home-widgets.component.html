@@ -1,0 +1,38 @@
+<div class="po-row">
+  <div
+    class="po-md-12 po-mt-2"
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    "
+  >
+    <po-widget [p-height]="198" style="width: 100%">
+      <div class="po-font-title po-text-center po-pt-5">
+        {{ productsData.stockProducts.length }}
+      </div>
+      <div class="po-text-center">Produto(s) em estoque</div>
+    </po-widget>
+    <po-widget [p-height]="198" style="width: 100%">
+      <div class="po-font-title po-text-center po-pt-5">
+        {{ productsData.receivingProducts.length }}
+      </div>
+      <div class="po-text-center">Produto(s) aguardando recebimento</div>
+    </po-widget>
+    <po-widget [p-height]="198" style="width: 100%">
+      <div class="po-font-title po-text-center po-pt-5">
+        {{ productsData.shippingProducts.length }}
+      </div>
+      <div class="po-text-center">Produto(s) pronto(s) para envio</div>
+    </po-widget>
+
+    <po-widget [p-height]="198" style="width: 100%">
+      <div class="po-font-title po-text-center po-pt-5">
+        {{ productsData.todayShippedProducts.length }}
+      </div>
+      <div class="po-text-center">Produto(s) expedido(s) hoje</div>
+    </po-widget>
+  </div>
+</div>
