@@ -99,7 +99,6 @@ export class ReceivingComponent {
   }
 
   putReceivedProductIntoStock(selectedProduct: any) {
-    console.log('chegou');
     const productIndex = this.products.findIndex(
       (product) => product.id === selectedProduct.id,
     );

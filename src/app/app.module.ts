@@ -17,6 +17,7 @@ import { PoNotificationModule } from '@po-ui/ng-components';
 import { PoButtonModule } from '@po-ui/ng-components';
 import { PoDynamicModule } from '@po-ui/ng-components';
 import { PoFieldModule } from '@po-ui/ng-components';
+import { HomeChartComponent } from './components/home-chart/home-chart.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { PoFieldModule } from '@po-ui/ng-components';
     HomeComponent,
     ReceivingComponent,
     ShippingComponent,
+    HomeChartComponent,
   ],
   imports: [
     BrowserModule,

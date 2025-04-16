@@ -1,8 +1,13 @@
 <po-toolbar p-title="Dashboard"></po-toolbar>
 
-<div class="po-row" style="justify-content: center">
-  <po-chart [p-series]="pizzaChart"></po-chart>
-</div>
+<app-home-chart
+  [productsData]="{
+    stockProducts,
+    receivingProducts,
+    shippingProducts,
+    shippedProducts,
+  }"
+></app-home-chart>
 
 <div class="po-row">
   <div

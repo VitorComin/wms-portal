@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { IProduct } from '../../../types/Product';
-import { PoChartDataLabel, PoChartSerie } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +16,6 @@ export class HomeComponent {
   public shippingProducts: IProduct[] = [];
   public shippedProducts: IProduct[] = [];
   public todayShippedProducts: IProduct[] = [];
-  public pizzaChart: PoChartSerie[] = [];
   public items: Array<any> = [];
   public columns: Array<any> = [];
 
@@ -43,13 +41,6 @@ export class HomeComponent {
       this.todayShippedProducts = this.shippedProducts.filter(
         (product) => product.updated_at.slice(0, 10) === today,
       );
-
-      this.pizzaChart = [
-        { label: 'Em Estoque', data: this.stockProducts.length },
-        { label: 'Recebimento', data: this.receivingProducts.length },
-        { label: 'Em Expedição', data: this.shippingProducts.length },
-        { label: 'Expedido', data: this.shippedProducts.length },
-      ];
 
       this.items = this.products.map((product) => ({
         name: product.name,

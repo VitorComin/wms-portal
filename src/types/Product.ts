@@ -7,3 +7,11 @@ export interface IProduct {
   destination?: string | null;
   updated_at: string;
 }
+
+export interface IProductInfosMap {
+  stockProducts: IProduct[];
+  receivingProducts: IProduct[];
+  shippingProducts: IProduct[];
+  shippedProducts: IProduct[];
+  todayShippedProducts: IProduct[];
+}
