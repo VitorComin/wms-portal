@@ -51,3 +51,12 @@ export interface IReceivingTableColumns {
   sortable?: boolean;
   icons?: TableIcon[];
 }
+
+export interface IShippingTableItems {
+  id: string;
+  name: string;
+  code: string;
+  quantity: number;
+  destination?: string | null;
+  shipping: string[];
+}

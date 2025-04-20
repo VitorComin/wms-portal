@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { IProduct } from '../../../types/Product';
+import { IProduct, IShippingTableItems } from '../../../types/Product';
 import { ProductsService } from '../../services/products.service';
 import {
   PoDynamicFormComponent,
-  PoDynamicFormField,
   PoNotificationService,
 } from '@po-ui/ng-components';
 
@@ -17,8 +16,7 @@ import {
 export class ShippingComponent {
   private products: IProduct[] = [];
   public shippingProducts: IProduct[] = [];
-  public items: Array<any> = [];
-  public columns: Array<any> = [];
+  public items: IShippingTableItems[] = [];
   public stockProducts: IProduct[] = [];
 
   constructor(
@@ -38,7 +36,7 @@ export class ShippingComponent {
         (product) => product.status === 'Estoque',
       );
 
-      this.items = this.shippingProducts.map((product) => ({
+      this.items = this.shippingProducts?.map((product) => ({
         id: product.id,
         name: product.name,
         code: product.code,
@@ -46,32 +44,10 @@ export class ShippingComponent {
         destination: product.destination,
         shipping: ['shipping', 'documentation'],
       }));
-
-      this.columns = [
-        { property: 'name', label: 'Nome' },
-        { property: 'code', label: 'Código' },
-        { property: 'quantity', label: 'Quantidade' },
-        { property: 'destination', label: 'Destino' },
-        {
-          property: 'shipping',
-          label: 'Confirmar Expedição',
-          type: 'icon',
-          sortable: false,
-          icons: [
-            {
-              action: this.turnToShippedProduct.bind(this),
-              color: 'green',
-              icon: 'an-fill an-check-fat',
-              tooltip: 'Expedir',
-              value: 'shipping',
-            },
-          ],
-        },
-      ];
     });
   }
 
-  turnToShippedProduct(selectedProduct: any) {
+  turnToShippedProduct = (selectedProduct: IShippingTableItems) => {
     const productIndex = this.products.findIndex(
       (product) => product.id === selectedProduct.id,
     );
@@ -99,7 +75,7 @@ export class ShippingComponent {
         },
       });
     }
-  }
+  };
 
   submitForm = (dynamicForm: PoDynamicFormComponent) => {
     if (!dynamicForm.form.valid) {
