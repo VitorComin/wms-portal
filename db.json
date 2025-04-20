@@ -201,6 +201,172 @@
         "receive",
         "documentation"
       ]
+    },
+    {
+      "id": "0e8956b9-338d-4185-b293-3755baeca106",
+      "name": "Batata",
+      "code": 2012592158,
+      "quantity": 900,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:14:18.513Z",
+      "destination": null
+    },
+    {
+      "id": "e68bc8aa-0959-4adb-94c1-4c2330a4b521",
+      "name": "Banana",
+      "code": 1523865327,
+      "quantity": 200,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:17:47.836Z",
+      "destination": null
+    },
+    {
+      "id": "7c2dc48e-da78-4689-b1a2-28691cfe21c3",
+      "name": "Caramelo",
+      "code": 3537465798,
+      "quantity": 222,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:18:32.575Z",
+      "destination": null
+    },
+    {
+      "id": "a11c611e-6eab-4147-a6ba-f210f411617b",
+      "name": "Kiwi",
+      "code": 1583568734,
+      "quantity": 123,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:19:24.807Z",
+      "destination": null
+    },
+    {
+      "id": "5100a209-6eb1-4545-a147-415a2f008922",
+      "name": "Cereja",
+      "code": 5372895673,
+      "quantity": 20,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:21:56.270Z",
+      "destination": null
+    },
+    {
+      "id": "debaa5f8-fe24-4f55-95a0-a440f890a772",
+      "name": "Macarrão",
+      "code": 5389769436,
+      "quantity": 700,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:26:21.574Z",
+      "destination": null
+    },
+    {
+      "id": "e3a50392-51dc-421f-bba6-d16a7d8018f7",
+      "name": "Maionese",
+      "code": 3289578921,
+      "quantity": 899,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:27:07.449Z",
+      "destination": null
+    },
+    {
+      "id": "717e8269-195f-4ac1-8a98-ebade0ded65f",
+      "name": "Chocolate",
+      "code": 3792674367,
+      "quantity": 2222,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:27:37.587Z",
+      "destination": null
+    },
+    {
+      "id": "fcdb8ccb-482f-47c6-9487-b6df5c96abde",
+      "name": "Alface",
+      "code": 3583486795,
+      "quantity": 21413,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:28:35.117Z",
+      "destination": null
+    },
+    {
+      "id": "6e295ae1-a4b5-4b05-8b27-d8ffa251983c",
+      "name": "Feijoada",
+      "code": 4215312234,
+      "quantity": 22,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:28:51.267Z",
+      "destination": null
+    },
+    {
+      "id": "f68b901a-5831-403b-90bb-5cc1e3e6e5d0",
+      "name": "Repolho",
+      "code": 5932678934,
+      "quantity": 222,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:30:10.325Z",
+      "destination": null
+    },
+    {
+      "id": "6695273e-0fed-4342-b207-04bdafa61e24",
+      "name": "Farofa",
+      "code": 2589235782,
+      "quantity": 30,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:31:51.422Z",
+      "destination": null
+    },
+    {
+      "id": "93fcddc4-e082-4aa7-b6e8-a01a928ec74c",
+      "name": "Caqui",
+      "code": 8972453786,
+      "quantity": 500,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:36:17.394Z",
+      "destination": null
+    },
+    {
+      "id": "66a7e27e-557d-4fa3-907b-f84384088626",
+      "name": "Laranja",
+      "code": 3289789423,
+      "quantity": 222,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:38:11.793Z",
+      "destination": null
+    },
+    {
+      "id": "ca080ce6-f39e-48b3-aca3-6e1efb90df19",
+      "name": "Iogurte",
+      "code": 3524368934,
+      "quantity": 40,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:38:51.477Z",
+      "destination": null
+    },
+    {
+      "id": "78e63291-1f5e-44a8-91e7-e289f4763f9c",
+      "name": "Vinho",
+      "code": 3868940370,
+      "quantity": 29,
+      "status": "Recebimento",
+      "updated_at": "2025-04-16T01:40:13.527Z",
+      "destination": null
+    },
+    {
+      "id": "9d7e606a-7236-40f9-ac45-7db07e9c9c0b",
+      "name": "Mostarda",
+      "code": 1354576457,
+      "quantity": 213,
+      "status": "Recebimento",
+      "updated_at": "2025-04-20T22:07:38.452Z",
+      "destination": null
+    },
+    {
+      "id": "31a8e533-5340-45b4-b333-cf91e4f520e6",
+      "name": "Lentilha",
+      "code": 5389987234,
+      "quantity": 700,
+      "status": "Estoque",
+      "updated_at": "2025-04-20T22:16:31.982Z",
+      "destination": null,
+      "receive": [
+        "receive",
+        "documentation"
+      ]
     }
   ]
 }

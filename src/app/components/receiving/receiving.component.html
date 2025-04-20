@@ -1,27 +1,8 @@
 <po-toolbar p-title="Recebimento"></po-toolbar>
 
-<div class="po-row" style="margin: 20px 0px">
-  <po-dynamic-form
-    #dynamicForm
-    style="width: 100%"
-    p-auto-focus="name"
-    [p-fields]="formFields"
-    [p-validate-fields]="validateFields"
-  >
-  </po-dynamic-form>
-
-  <br />
-
-  <div class="po-row" style="margin-top: 20px">
-    <po-button
-      class="po-md-3"
-      p-label="Salvar"
-      style="width: 120px"
-      (p-click)="onSubmit(dynamicForm)"
-    >
-    </po-button>
-  </div>
-</div>
+<app-receiving-form
+  [updateProductListAfterFormSubmit]="updateProductListAfterFormSubmit"
+></app-receiving-form>
 
 <div class="po-row" style="margin-bottom: 50px">
   <po-container class="po-lg-12 po-mt-2">

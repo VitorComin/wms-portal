@@ -1,10 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { IProduct } from '../../../types/Product';
+import { Component } from '@angular/core';
+import { IProduct, IReceivingProductsTableItems } from '../../../types/Product';
 import { ProductsService } from '../../services/products.service';
-import {
-  PoNotificationService,
-  PoDynamicFormField,
-} from '@po-ui/ng-components';
+import { PoNotificationService } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-receiving',
@@ -13,46 +10,10 @@ import {
   styleUrl: './receiving.component.css',
 })
 export class ReceivingComponent {
-  private products: IProduct[] = [];
+  public products: IProduct[] = [];
   public receivingProducts: IProduct[] = [];
-  public items: Array<any> = [];
+  public items: Array<IReceivingProductsTableItems> = [];
   public columns: Array<any> = [];
-  validateFields: Array<string> = ['state'];
-  formFields: Array<PoDynamicFormField> = [
-    {
-      property: 'name',
-      label: 'Nome',
-      divider: 'Detalhes do Produto',
-      required: true,
-      minLength: 4,
-      maxLength: 30,
-      gridColumns: 4,
-      gridSmColumns: 12,
-      order: 1,
-      placeholder: 'Insira o nome',
-    },
-    {
-      property: 'code',
-      label: 'Código',
-      placeholder: 'XXXXXXX-XX',
-      type: 'number',
-      minLength: 4,
-      required: true,
-      maxLength: 10,
-      gridColumns: 4,
-      gridSmColumns: 12,
-      order: -1,
-    },
-    {
-      property: 'quantity',
-      label: 'Quantidade',
-      type: 'number',
-      required: true,
-      maxLength: 5,
-      gridColumns: 4,
-      gridSmColumns: 12,
-    },
-  ];
 
   constructor(
     private productService: ProductsService,
@@ -127,49 +88,11 @@ export class ReceivingComponent {
     }
   }
 
-  onSubmit(dynamicForm: any) {
-    if (!dynamicForm.form.valid) {
-      this.poNotification.error({
-        message: 'Preencha todos os campos obrigatórios corretamente!',
-        duration: 2000,
-      });
-      return;
-    }
-
-    const formValues = dynamicForm.form.value;
-    const newReceivingProduct = {
-      id: crypto.randomUUID(),
-      name: formValues.name,
-      code: formValues.code,
-      quantity: formValues.quantity,
-      status: 'Recebimento',
-      updated_at: new Date().toISOString(),
-      destination: null,
-    };
-
-    this.productService.addProduct(newReceivingProduct).subscribe({
-      next: () => {
-        this.poNotification.success({
-          message: 'Produto em recebimento!',
-          duration: 2000,
-        });
-        const newReceivingProductTableEntry = {
-          ...newReceivingProduct,
-          receive: ['receive', 'documentation'],
-        };
-
-        this.items = [...this.items, newReceivingProductTableEntry];
-        this.products = [...this.products, newReceivingProductTableEntry];
-
-        dynamicForm.form.reset();
-      },
-      error: (error) => {
-        console.error('Erro ao atualizar o produto:', error);
-        this.poNotification.error({
-          message: 'Erro ao receber o produto!',
-          duration: 2000,
-        });
-      },
-    });
-  }
+  updateProductListAfterFormSubmit = (newReceivingProduct: IProduct): void => {
+    this.items = [
+      ...this.items,
+      { ...newReceivingProduct, receive: ['receive', 'documentation'] },
+    ];
+    this.products = [...this.products, newReceivingProduct];
+  };
 }

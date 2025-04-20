@@ -20,6 +20,7 @@ import { PoFieldModule } from '@po-ui/ng-components';
 import { HomeChartComponent } from './components/home-chart/home-chart.component';
 import { HomeWidgetsComponent } from './components/home-widgets/home-widgets.component';
 import { HomeProductsTableComponent } from './components/home-products-table/home-products-table.component';
+import { ReceivingFormComponent } from './components/receiving-form/receiving-form.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HomeProductsTableComponent } from './components/home-products-table/hom
     HomeChartComponent,
     HomeWidgetsComponent,
     HomeProductsTableComponent,
+    ReceivingFormComponent,
   ],
   imports: [
     BrowserModule,

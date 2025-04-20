@@ -27,3 +27,11 @@ export interface IHomeProductsTableItens {
   quantity: number;
   status: string;
 }
+
+export interface IReceivingProductsTableItems {
+  id: string;
+  name: string;
+  code: string;
+  quantity: number;
+  receive: string[];
+}
