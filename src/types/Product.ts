@@ -35,3 +35,19 @@ export interface IReceivingProductsTableItems {
   quantity: number;
   receive: string[];
 }
+
+export interface TableIcon {
+  action: (row: IReceivingProductsTableItems) => void;
+  color: string;
+  icon: string;
+  tooltip: string;
+  value: string;
+}
+
+export interface IReceivingTableColumns {
+  property: string;
+  label: string;
+  type?: string;
+  sortable?: boolean;
+  icons?: TableIcon[];
+}

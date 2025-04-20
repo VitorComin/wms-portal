@@ -225,7 +225,7 @@
       "name": "Caramelo",
       "code": 3537465798,
       "quantity": 222,
-      "status": "Recebimento",
+      "status": "Estoque",
       "updated_at": "2025-04-16T01:18:32.575Z",
       "destination": null
     },
@@ -234,7 +234,7 @@
       "name": "Kiwi",
       "code": 1583568734,
       "quantity": 123,
-      "status": "Recebimento",
+      "status": "Estoque",
       "updated_at": "2025-04-16T01:19:24.807Z",
       "destination": null
     },
@@ -367,6 +367,42 @@
         "receive",
         "documentation"
       ]
+    },
+    {
+      "id": "37bb0535-e8c1-4db8-ac7e-8f32def61b2c",
+      "name": "Maça",
+      "code": 2590273986,
+      "quantity": 500,
+      "status": "Estoque",
+      "updated_at": "2025-04-20T22:21:44.699Z",
+      "destination": null
+    },
+    {
+      "id": "4f1e7c7c-7ec6-4a9d-8ca9-8929d98f5998",
+      "name": "Limão",
+      "code": 5357836589,
+      "quantity": 300,
+      "status": "Estoque",
+      "updated_at": "2025-04-20T22:27:20.598Z",
+      "destination": null
+    },
+    {
+      "id": "949694e7-27d6-4d75-92d3-c6cc31d1fcda",
+      "name": "Ketchup",
+      "code": 2105897234,
+      "quantity": 200,
+      "status": "Estoque",
+      "updated_at": "2025-04-20T22:28:10.734Z",
+      "destination": null
+    },
+    {
+      "id": "c6eca633-4826-4747-bba5-18667ba6091f",
+      "name": "Abacaxi",
+      "code": 3209659034,
+      "quantity": 30,
+      "status": "Estoque",
+      "updated_at": "2025-04-20T22:31:19.551Z",
+      "destination": null
     }
   ]
 }

@@ -25,7 +25,7 @@ export class ReceivingFormComponent {
       label: 'Nome',
       divider: 'Detalhes do Produto',
       required: true,
-      minLength: 4,
+      minLength: 2,
       maxLength: 30,
       gridColumns: 4,
       gridSmColumns: 12,

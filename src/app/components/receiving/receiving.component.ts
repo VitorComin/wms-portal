@@ -13,7 +13,6 @@ export class ReceivingComponent {
   public products: IProduct[] = [];
   public receivingProducts: IProduct[] = [];
   public items: Array<IReceivingProductsTableItems> = [];
-  public columns: Array<any> = [];
 
   constructor(
     private productService: ProductsService,
@@ -35,31 +34,12 @@ export class ReceivingComponent {
         quantity: product.quantity,
         receive: ['receive', 'documentation'],
       }));
-
-      this.columns = [
-        { property: 'name', label: 'Nome' },
-        { property: 'code', label: 'Código' },
-        { property: 'quantity', label: 'Quantidade' },
-        {
-          property: 'receive',
-          label: 'Confirmar Recebimento',
-          type: 'icon',
-          sortable: false,
-          icons: [
-            {
-              action: this.putReceivedProductIntoStock.bind(this),
-              color: 'green',
-              icon: 'an-fill an-check-fat',
-              tooltip: 'Receber',
-              value: 'receive',
-            },
-          ],
-        },
-      ];
     });
   }
 
-  putReceivedProductIntoStock(selectedProduct: any) {
+  putReceivedProductIntoStock = (
+    selectedProduct: IReceivingProductsTableItems,
+  ) => {
     const productIndex = this.products.findIndex(
       (product) => product.id === selectedProduct.id,
     );
@@ -86,7 +66,7 @@ export class ReceivingComponent {
         },
       });
     }
-  }
+  };
 
   updateProductListAfterFormSubmit = (newReceivingProduct: IProduct): void => {
     this.items = [
