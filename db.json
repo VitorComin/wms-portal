@@ -58,10 +58,10 @@
       "id": "2112534",
       "name": "Produto 5552",
       "code": "123456785559",
-      "status": "Estoque",
+      "status": "Expedido",
       "quantity": 55,
-      "destination": null,
-      "updated_at": "2025-03-25T14:30:00.000Z"
+      "destination": "Casa do Jubileu",
+      "updated_at": "2025-04-20T22:43:03.570Z"
     },
     {
       "id": "54765892",
@@ -112,10 +112,10 @@
       "id": "29080",
       "name": "Produt2222o 2",
       "code": "123456789",
-      "status": "Estoque",
+      "status": "Expedido",
       "quantity": 10,
-      "destination": null,
-      "updated_at": "2025-03-25T14:30:00.000Z"
+      "destination": "Casa do Gabriel Rocha Guimarãe",
+      "updated_at": "2025-04-20T22:41:13.973Z"
     },
     {
       "id": "51562",
@@ -167,9 +167,9 @@
       "name": "asfsaf22222",
       "code": 22222222,
       "quantity": 23,
-      "status": "Estoque",
-      "updated_at": "2025-04-03T21:55:07.396Z",
-      "destination": null
+      "status": "Expedido",
+      "updated_at": "2025-04-20T22:43:44.548Z",
+      "destination": " Casa do Rafael Reinert"
     },
     {
       "id": "13d19084-1157-412e-bc19-be551e7a1bbf",

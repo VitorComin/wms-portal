@@ -22,6 +22,7 @@ import { HomeWidgetsComponent } from './components/home-widgets/home-widgets.com
 import { HomeProductsTableComponent } from './components/home-products-table/home-products-table.component';
 import { ReceivingFormComponent } from './components/receiving-form/receiving-form.component';
 import { ReceivingProductsTableComponent } from './components/receiving-products-table/receiving-products-table.component';
+import { ShippingFormComponent } from './components/shipping-form/shipping-form.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ReceivingProductsTableComponent } from './components/receiving-products
     HomeProductsTableComponent,
     ReceivingFormComponent,
     ReceivingProductsTableComponent,
+    ShippingFormComponent,
   ],
   imports: [
     BrowserModule,

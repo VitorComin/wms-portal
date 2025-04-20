@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IProduct } from '../../../types/Product';
 import { ProductsService } from '../../services/products.service';
 import {
+  PoDynamicFormComponent,
   PoDynamicFormField,
   PoNotificationService,
 } from '@po-ui/ng-components';
@@ -18,8 +19,7 @@ export class ShippingComponent {
   public shippingProducts: IProduct[] = [];
   public items: Array<any> = [];
   public columns: Array<any> = [];
-  public stockProducts: Array<any> = [];
-  formFields: Array<PoDynamicFormField> = [];
+  public stockProducts: IProduct[] = [];
 
   constructor(
     public productService: ProductsService,
@@ -68,32 +68,6 @@ export class ShippingComponent {
           ],
         },
       ];
-
-      this.formFields = [
-        {
-          property: 'product',
-          label: 'Produto',
-          divider: 'Detalhes do Produto',
-          required: true,
-          gridColumns: 6,
-          gridSmColumns: 12,
-          fieldValue: 'value',
-          fieldLabel: 'name',
-          options: this.stockProducts.map((product) => ({
-            value: product.id,
-            name: `${product.name} - ${product.quantity} itens`,
-          })),
-          placeholder: 'Selecione um produto',
-        },
-        {
-          property: 'destination',
-          label: 'Destino',
-          required: true,
-          maxLength: 30,
-          gridColumns: 6,
-          gridSmColumns: 12,
-        },
-      ];
     });
   }
 
@@ -127,7 +101,7 @@ export class ShippingComponent {
     }
   }
 
-  submitForm(dynamicForm: any) {
+  submitForm = (dynamicForm: PoDynamicFormComponent) => {
     if (!dynamicForm.form.valid) {
       this.poNotification.error({
         message: 'Preencha todos os campos obrigatórios corretamente!',
@@ -168,5 +142,5 @@ export class ShippingComponent {
         },
       });
     }
-  }
+  };
 }
