@@ -60,3 +60,19 @@ export interface IShippingTableItems {
   destination?: string | null;
   shipping: string[];
 }
+
+interface IColumnIcon {
+  action: () => void;
+  color: string;
+  icon: string;
+  tooltip: string;
+  value: string;
+}
+
+export interface IShippingTableColumns {
+  property: string;
+  label: string;
+  type?: string;
+  sortable?: boolean;
+  icons?: IColumnIcon[];
+}

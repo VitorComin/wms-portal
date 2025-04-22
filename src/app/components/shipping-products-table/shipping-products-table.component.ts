@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { IShippingTableItems } from '../../../types/Product';
+import {
+  IShippingTableColumns,
+  IShippingTableItems,
+} from '../../../types/Product';
 
 @Component({
   selector: 'app-shipping-products-table',
@@ -14,7 +17,7 @@ export class ShippingProductsTableComponent {
     selectedProduct: IShippingTableItems,
   ) => void;
 
-  public columns: Array<any> = [];
+  public columns: Array<IShippingTableColumns> = [];
 
   ngOnInit(): void {
     this.columns = [
