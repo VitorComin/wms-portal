@@ -62,7 +62,7 @@ export interface IShippingTableItems {
 }
 
 interface IColumnIcon {
-  action: () => void;
+  action: (selectedProduct: IShippingTableItems) => void;
   color: string;
   icon: string;
   tooltip: string;
